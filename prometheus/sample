@@ -21,3 +21,20 @@
     metrics_path: /hadoop243.ntpq_metric
     target_groups:
       - targets: ['10.100.2.108:8000']
+
+
+  - job_name:  'ntp'
+    scrape_interval: 1m
+    metrics_path: /hadoop241.ntpq_metric
+    metrics_path: /hadoop242.ntpq_metric
+    metrics_path: /hadoop243.ntpq_metric
+    target_groups:
+      - targets: ['10.100.2.108:8000']
+      
+   - job_name:  'ntp'
+    scrape_interval: 1m
+    metrics_path: ?
+    target_groups:
+      - targets: ['10.100.2.108:8000/hadoop241.ntpq_metric']
+      - targets: ['10.100.2.108:8000/hadoop242.ntpq_metric']
+      - targets: ['10.100.2.108:8000/hadoop243.ntpq_metric']
