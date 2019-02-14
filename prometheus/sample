@@ -1,0 +1,23 @@
+  - job_name:  'ntp1'
+
+    # Override the global default and scrape targets from this job every 5 seconds.
+    scrape_interval: 1m
+    metrics_path: /hadoop241.ntpq_metric
+    target_groups:
+      - targets: ['10.100.2.108:8000']
+
+  - job_name:  'ntp2'
+
+    # Override the global default and scrape targets from this job every 5 seconds.
+    scrape_interval: 1m
+    metrics_path: /hadoop242.ntpq_metric
+    target_groups:
+      - targets: ['10.100.2.108:8000']
+
+  - job_name:  'ntp3'
+
+    # Override the global default and scrape targets from this job every 5 seconds.
+    scrape_interval: 1m
+    metrics_path: /hadoop243.ntpq_metric
+    target_groups:
+      - targets: ['10.100.2.108:8000']
